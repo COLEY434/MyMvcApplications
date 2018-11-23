@@ -11,7 +11,15 @@ namespace MyMvcApplications.Controllers
         // GET: Student
         public string Index()
         {
-            return "This is the return type of the index actions";
+            return "This is an example";
         }
-    }
+
+		[ActionName("find")]
+		public ActionResult Edit()
+		{
+			// update student to the database
+
+			return RedirectToAction("Index");
+		}
+	}
 }
